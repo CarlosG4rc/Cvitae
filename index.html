@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVitae</title>
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integraty="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4ZBNTSRyMA2Fd33n5dQBlWUE00s/" crossorigin="anonymous">
+    <style>
+    html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::before, *::after{
+    box-sizing: inherit;
+} 
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+/**Globales**/
+.contenedor{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+h1, h2, h3, h4{
+    font-family: 'PT Sans', sans-serif;
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+    line-height: 1.2;
+}
+img{
+    max-width: 80%;
+}
+/*Utilidades*/
+.centrar-texto{
+    text-align: center;
+}
+.no-margin{
+    margin: 0;
+}
+/**Grid**/
+@media (min-width: 768px){
+    .grid{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    } 
+    .centrar-columnas{
+        justify-content: center;
+    }
+    .columnas-4{
+        flex:0 0 calc(33.3% - 1rem)
+    }
+    .columna-6{
+        flex: 0 0  calc(50% - 1rem);
+    }
+    .columnas-8{
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+    .columnas-10{
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columnas-12{
+        flex: 0 0 100%;
+    }
+}
+.btn {
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    color: #ffffff;
+    text-decoration: none; 
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    flex: 0 0 100%;
+    transition: all .5 ease;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #000000;
+    
+}
+@media (min-width: 768px){
+    .btn{
+        display: inline-block;
+        flex: 0 0 auto;
+    }    
+}
+.btn-secudnario{
+    background-color: #000;
+}
+
+/*Header*/
+.site-header{
+    background-color: #ffffff;
+    position: relative;;
+}
+.site-header img{
+    position: absolute;
+}
+.site-header a{
+    color: #000000;
+}
+.site-header h1{
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+.site-header h1 span{
+    font-weight: 700;
+}
+.texto-header{
+    color: #000000;
+    text-align: center;
+}
+.barra{
+    background-color: black;
+}
+.barra i{
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.entrada{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #0f0f0f;
+}
+.experiencia{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #0f0f0f;
+    font-size: large;
+}
+.experiencia p{
+    font-weight: 500;
+}
+.experiencia span{
+    font-weight: 700;
+}
+.experiencia i{
+    font-size: 4rem;
+    color: green;
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+.personal li{
+    font-size: 2rem ;
+}
+.personal,
+.knowledge{
+    float: 0 0 100%;
+}
+.knowledge{
+    order: -1;
+}
+@media (min-width: 768px){
+    .contenido-principal{
+        justify-content: space-between;
+    }
+    .knowledge{
+        flex-basis: 50%;
+    }
+    .personal{
+        flex-basis: calc(50% - 4rem);
+        order: 2;
+    }
+}
+.knowledge li{
+    font-size: 2rem;
+    color: #000000;
+}
+.knowledge li i:hover{
+    background-color: #000000;
+    color: blue;
+}
+.knowledge li{
+    margin: 1rem 2rem;
+
+}
+.knowledge i, .personal i{
+    font-size: 4rem;
+}
+.iconos-contacto{
+    text-align: center;
+    
+}
+.iconos-contacto i{
+    color: white;
+    font-size: 8rem;
+}
+.iconos-contacto i:hover{
+    color: blue;
+}
+.contacto-personal{
+    text-align: center;
+}
+.contacto-personal li i{
+    font-size: 4rem;
+}
+.contacto-personal li span{
+    font-size: 2rem;
+    font-family:'Open Sans', sans-serif;
+}
+.contacto-personal span{
+    text-transform: lowercase; !important;
+}
+/**Footer**/
+.site-footer{
+    background-color: #000000;
+    padding: 3rem;
+    margin-top: 4rem;
+}
+.site-footer p{
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+}
+.site-footer p span{
+    font-weight: 700;
+}
+
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="contenedor">
+            <img src="https://drive.google.com/thumbnail?id=1BIyl9j7E_D_8_05Q_kIV_O39VGRzRs3u" alt="Carlos">
+            <a href="#">
+                <h1 class="no-margin">Carlos <span>García</span></h1>
+            </a>
+        </div>
+        <div class="texto-header">
+            <h2 class="no-margin">Ing. en Comunicaciones y Electrónica</h2>
+        </div>
+        <div class="barra">
+            <div class="correo-telefono">
+                <ul class="contacto-personal">
+                    <li><i class="far fa-envelope"> <span> carlosesolrac93@gmail.com</span></i></li>
+                    <li><i class="fab fa-whatsapp"> <span> 5540390456 </span></i></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="contenido-principal">
+        <main class="sobremi">
+            <h2>Experiencia Laboral</h2>
+            <div class="entrada">
+                <h3>Desarrollador y Dieñador de Aplicaciones destinadas a la Educación</h3>
+                <p>Instituto Francisco Possenti <span>Agosto 2018</span></p>
+                <ul>
+                    <li>Multimedia de eventos escolares.</li>
+                    <li>Manejo de plataforma GSuite For Education.</li>
+                    <li>Diseño de página Web.</li>
+                    <li>Diseño de aplicaciones para gestion de escolar.</li>
+                </ul>
+            </div>
+            <div class="entrada">
+                <h3>Desarrollador de productos Electrónicos.</h3>
+                <p>CEISA <span>Marzo 2017</span></p>
+                <ul>
+                    <li>Diseño electrónico de produsctos de control doméstico.</li>
+                    <li>Diseño de imagen de producto.</li>
+                    <li>Diseño de página wed de ventas.</li>
+                    </ul>
+                </div>
+                <h2>Formación Académica</h2>
+                <article class="experiencia">
+                    <h3>Pasante Carrera técnica en Telecomunicaciones</h3>
+                    <i class="fas fa-broadcast-tower"></i><p>2008-2011 <span>CECYT 10 Carlos Vallejo Marquez</span></p>
+                </article>
+                <article class="experiencia">
+                    <h3>Licenciatura en Ingenieria en Comunicaciones y Electrónia</h3>
+                    <i class="fas fa-atom"></i><p>2011-2015 <span>ESIME Culhuacán IPN</span></p>
+                </article>
+                <div class="skills">
+                    <div class="personal">
+                        <h3>Habilidades Personales</h3>
+                        <ul>
+                            <li><i class="fas fa-brain"></i>  Creativo</li>
+                            <li><i class="fas fa-chart-bar"></i>  Analítico</li>
+                            <li><i class="fas fa-user-friends"></i>  Trabajo en equipo</li>
+                            <li><i class="fas fa-chalkboard-teacher"></i>  Autodidacta</li>
+                            <li><i class="fas fa-globe"></i>  Inglés: Intermedio</li>
+                            <a href="https://dazzling-villani-ea82b8.netlify.app" class="btn btn-secudnario"><i class="fas fa-link"></i>  Página Web</a>
+                        </ul>
+                    </div>
+                    <div class="knowledge">
+                    <h3>Conocimientos</h3>
+                        <ul>
+                            <li><i class="fab fa-google"></i> Programación en GAS</li>
+                            <li><i class="fab fa-js-square"></i> Java</li>
+                            <li><i class="fab fa-python"></i> Python</li>
+                            <li><i class="fas fa-code"></i> HTML</li>
+                            <li><i class="fab fa-php"></i> PHP</li>
+                            <li><i class="fas fa-database"></i> SQL</li>
+                            <a href="https://github.com/CarlosG4rc" class="btn btn-secudnario"><i class="fab fa-github-square"></i>  GitHub</a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="site-footer">
+        <div class="contenedor">
+            <div class="barra">
+                <p>Carlos <span>García</span></p>
+                <div class="contenedor iconos-contacto">
+                    <a href="https://web.facebook.com/profile.php?id=100005511338052"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/CarlosG4r"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.linkedin.com/in/carlos-garc%C3%ADa-24bbb099/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/CarlosG4rc"><i class="fab fa-github-square"></i></a>
+                    <div class="correo-telefono">
+                        <ul class="contacto-personal">
+                            <li><i class="far fa-envelope"> <span> carlosesolrac93@gmail.com</span></i></li>
+                            <li><i class="fab fa-whatsapp"> <span> 5540390456 </span></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
