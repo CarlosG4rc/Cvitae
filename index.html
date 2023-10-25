@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body style="background-color: #2D2D86;">
-    <div class="container">
+    <div class="container" style="background-color: #2D2D86;">
         <div class="row" >
-            <div class="col-4 mt-5">
-                <div class="row mt-5">
+            <div class="col-4">
+                <div class="row">
                     <div class="col mx-auto mt-5 text-center">
                         <img style="width: 225px; height:auto;" src="https://drive.google.com/thumbnail?id=1_Nks7kVwttZEw4bSI9iXFnPq9LQENnXH" alt="Carlos">
                     </div>
                 </div>
+                <button class="no-print" id="imprimir" onclick="imprimir()">Imprimir</button>
                 <div class="row  mt-5">
                     <div class="col mx-auto text-center">
                         <h1 class="text-white">Carlos Enrique <span style="text-decoration: underline;">García Padilla</span></h1>
@@ -35,6 +36,29 @@
                             <li><i class="fab fa-whatsapp"> <i class="fa-telegram-plane"></i><span class="h5">  5540390456 </span></i></li>
                             <li><i class="fas fa-link"><span class="h5"> https://carlos-g4rcia.netlify.app/ </span></i>
                         </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mx-auto">
+                        <h3 class="text-white" style="text-decoration: underline;">Educación</h3>
+                        <div class="row text-white">
+                            <div class="col-3 my-auto card rounded-circle text-center" style="background-color: #ffffff;">
+                                <h5 style="color: black;">2011-2015</h5>
+                            </div>
+                            <div class="col-8">
+                                <h4>Instituto Politécnico Nacional</h4>
+                                <p>Ing. en Comunicaciones y Electrónica | ESIME Culhuacan</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 my-auto card rounded-circle text-center" style="background-color: #ffffff;">
+                                <h5 style="color: black;">2011-2015</h5>
+                            </div>
+                            <div class="col-8 text-white">
+                                <h4>Instituto Politécnico Nacional</h4>
+                                <p>Técnico en Telecomunicaciones | CECYT 10</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,31 +171,17 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col mx-auto">
-                        <h3 style="text-decoration: underline;">Educación</h3>
-                        <div class="row">
-                            <div class="col-2 card text-center" style="background-color: #2D2D86; border-radius: 40%; margin: 1.5rem;">
-                                <h5 class="text-white">2011-2015</h5>
-                            </div>
-                            <div class="col-8">
-                                <h4>Instituto Politécnico Nacional</h4>
-                                <p>Ing. en Comunicaciones y Electrónica | ESIME Culhuacan</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-2 card text-center" style="background-color: #2D2D86; border-radius: 40%; margin: 1.5rem;">
-                                <h5 class="text-white">2011-2015</h5>
-                            </div>
-                            <div class="col-8">
-                                <h4>Instituto Politécnico Nacional</h4>
-                                <p>Técnico en Telecomunicaciones | CECYT 10</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div> 
     </div>  
 </body>
+<script>
+    function imprimir(){
+        window.print({
+            addGlobalStyles : true,
+            stylesheet:"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css",
+            noPrintSelector : ".no-print",
+        });
+    }
+</script>
 </html>
